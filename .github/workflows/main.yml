@@ -1,0 +1,16 @@
+name: iOS Simulator test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3
+
+      - name: List available simulators
+        run: xcversion simulators
