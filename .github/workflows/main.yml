@@ -12,5 +12,9 @@ jobs:
       # - name: Setup tmate session
       #   uses: mxschmitt/action-tmate@v3
 
+      - name: List with xcrun
+        run: xcrun simctl list devices
+
       - name: List available simulators
         run: xcversion simulators
+
